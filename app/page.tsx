@@ -16,11 +16,13 @@ export default function Home() {
   return (
     <div>
       <button onClick={getImage}>get image</button>
-      {image && (
-        <div>
-          <Image src={image} height={500} width={500} alt="" />
-        </div>
-      )}
+      <div className="w-[100vw] flex justify-center">
+        {image && (
+          <div>
+            <Image src={image} height={500} width={500} alt="" />
+          </div>
+        )}
+      </div>
     </div>
   );
 }
