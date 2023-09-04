@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useState } from "react";
+import Draggable from "react-draggable";
 import { ResizableBox } from "react-resizable";
 import "react-resizable/css/styles.css";
 
@@ -33,22 +34,24 @@ export default function Home() {
               alt=""
               className="relative"
             />
-            <ResizableBox
-              height={50}
-              width={100}
-              maxConstraints={[500, 500]}
-              resizeHandles={["n", "s", "e", "w", "ne", "nw", "se", "sw"]}
-              className="bg-white opacity-50"
-              onResize={handleResize}
-            >
-              <input
-                placeholder="Insert text"
-                style={{ fontSize: fontSize }}
-                className={`h-full w-full p-2`}
+            <Draggable bounds={"parent"}>
+              <ResizableBox
+                height={50}
                 width={100}
-                height={100}
-              />
-            </ResizableBox>
+                maxConstraints={[500, 500]}
+                resizeHandles={["n", "s", "e", "w", "ne", "nw", "se", "sw"]}
+                className="bg-white opacity-50"
+                onResize={handleResize}
+              >
+                <input
+                  placeholder="Insert text"
+                  style={{ fontSize: fontSize }}
+                  className={`h-full w-full p-2`}
+                  width={100}
+                  height={100}
+                />
+              </ResizableBox>
+            </Draggable>
           </div>
         )}
       </div>
