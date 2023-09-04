@@ -34,24 +34,28 @@ export default function Home() {
               alt=""
               className="relative"
             />
-            <Draggable bounds={"parent"}>
-              <ResizableBox
-                height={50}
-                width={100}
-                maxConstraints={[500, 500]}
-                resizeHandles={["n", "s", "e", "w", "ne", "nw", "se", "sw"]}
-                className="bg-white opacity-50"
-                onResize={handleResize}
-              >
-                <input
-                  placeholder="Insert text"
-                  style={{ fontSize: fontSize }}
-                  className={`h-full w-full p-2`}
-                  width={100}
-                  height={100}
-                />
-              </ResizableBox>
-            </Draggable>
+            <div className="w-[500px] h-[500px]">
+              <Draggable bounds={"parent"}>
+                <div className="inline-block">
+                  <ResizableBox
+                    height={50}
+                    width={100}
+                    maxConstraints={[500, 500]}
+                    resizeHandles={["n", "s", "e", "w", "ne", "nw", "se", "sw"]}
+                    className="bg-white opacity-50"
+                    onResize={handleResize}
+                  >
+                    <input
+                      placeholder="Insert text"
+                      style={{ fontSize: fontSize }}
+                      className={`h-full w-full p-2 opacity-100`}
+                      width={100}
+                      height={100}
+                    />
+                  </ResizableBox>
+                </div>
+              </Draggable>
+            </div>
           </div>
         )}
       </div>
