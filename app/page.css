@@ -1,0 +1,21 @@
+.resizable-box {
+    background-color: lightblue;
+    border: 1px solid #ccc;
+    position: relative;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+  }
+  
+  /* Style for the resizable handles */
+  .react-resizable-handle {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #007bff; /* Handle color */
+    bottom: 0;
+    right: 0;
+    cursor: se-resize; /* Cursor style for southeast handle */
+  }
