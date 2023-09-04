@@ -17,7 +17,8 @@ export default function Home() {
   };
 
   const handleResize = (event: any, { node, size, handle }: any) => {
-    console.log(size);
+    const font = Math.max(size.width / 5, 20);
+    setFontSize(font);
   };
 
   return (
@@ -41,8 +42,9 @@ export default function Home() {
               onResize={handleResize}
             >
               <input
+                placeholder="Insert text"
                 style={{ fontSize: fontSize }}
-                className={`h-full w-full`}
+                className={`h-full w-full p-2`}
                 width={100}
                 height={100}
               />
